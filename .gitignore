@@ -5,3 +5,4 @@ tests/C
 tests/txt_huffman
 docs/out/*
 !docs/out/out.pdf
+CMakeLists.txt
