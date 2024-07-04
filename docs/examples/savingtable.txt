@@ -1,0 +1,5 @@
+# 8 bits for index and 1 bit for relative frequency
+00000010 0 # frequency = 1
+00000001 1 # frequency = 2; occurs one more time than the previous
+00000111 0 # frequency = 2; occurs the same times as the previous
+00000100 1 # frequency = 3; occurs one more time than the previous

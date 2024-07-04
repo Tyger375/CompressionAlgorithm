@@ -1,0 +1,9 @@
+freqs = scale_dict(freqs)
+
+# "scaling" the dictionary
+# {
+#     1: 2
+#     2: 1
+#     4: 3
+#     7: 2
+# }

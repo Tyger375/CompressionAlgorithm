@@ -1,0 +1,7 @@
+C_Code/
+cmake-build-debug/
+
+tests/C
+tests/txt_huffman
+docs/out/*
+!docs/out/out.pdf

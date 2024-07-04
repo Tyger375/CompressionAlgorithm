@@ -1,0 +1,5 @@
+indices = []
+for i in indexes:
+    indices.append(no_duplicates.index(i))
+
+# [0, 1, 2, 3, 4, 3, 2, 5, 4]

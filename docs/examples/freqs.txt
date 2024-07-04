@@ -1,0 +1,9 @@
+freqs = Counter(indexes)
+
+# frequencies example
+# {
+#     1: 5 | index 1 occurs 5 times
+#     2: 2
+#     4: 6
+#     7: 5
+# }

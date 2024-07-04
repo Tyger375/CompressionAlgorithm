@@ -1,0 +1,20 @@
+# represeting a binary file
+
+# FIRST PART OF THE FILE: legend
+# 1 byte that indicates the number of added bits at the end of the file
+    00000000
+
+# DELIMITER
+
+# SECOND PART: table
+# 9 bits each
+# 8 bits for the index, 1 is the relative frequency
+    00000010 0 # 2: 1
+    00000001 1 # 1: 2
+    00000111 0 # 7: 2
+    00000100 1 # 4: 3
+
+# DELIMITER
+
+# THIRD PART: indices
+    

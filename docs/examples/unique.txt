@@ -1,0 +1,2 @@
+unique = list(set(indexes))
+# [8, 5, 2, 4, 3, 1]
