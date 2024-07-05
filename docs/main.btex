@@ -1,5 +1,9 @@
 @class article\
 
+@env {
+  pdftitle = Compression Algorithm
+}
+
 @title Compression Algorithm\
 @author Edoardo Takanen\
 @date\
@@ -8,6 +12,16 @@
 
 @document {
   @maketitle\
+
+  @center {
+    @LARGE\ Abstract
+  }
+
+  @newpage\
+
+  @tableofcontents\
+
+  @newpage\
 
   @section Genetic Code\
 
