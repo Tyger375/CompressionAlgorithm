@@ -17,6 +17,10 @@
     @LARGE\ Abstract
   }
 
+  This paper presents a way to improve data storage based on how the genetic code works. The primary goal of the algorithm is obviously to reduce text file sizes with **NO loss of information**, however, given how I decided to structure the algorithm, this can also work well as an encryption algorithm.\\
+  The algorithm tries to imitate how the genetic code inside the DNA is structured and used.
+  The proposed compression algorithm offers significant advantages in terms of compression efficiency and computational performance, achieving a tested efficiency of 40$$percent$$.
+
   @newpage\
 
   @tableofcontents\
@@ -28,7 +32,7 @@
   Inside the DNA, a string full of nucleotides has all the information to build all the proteins needed by the system.\\
   A sequence is made of nucleotides triplets, also called codons.
   Based on where we start reading this string, we get different codons.\\
-  For example, the string AAATGAACG, if read from the first position, contains the codons AAA, TGA, and ACG; if read from the second position, it contains the codons AAT and GAA; and if read from the third position, it contains the codons ATG and AAC.\\
+  For example, the string **AAATGAACG**, if read from the first position, contains the codons **AAA**, **TGA**, and **ACG**; if read from the second position, it contains the codons **AAT** and **GAA**; and if read from the third position, it contains the codons **ATG** and **AAC**.\\
   This means that the same compressed sequence, can have different meanings based on the index of start.
   This got me thinking about a new way of compressing data, but also of encrypting.
 
@@ -48,7 +52,7 @@
   }
 
   The first two will generate two separated files that will be read by the decrypter in the end.\\
-  I decided to separate the short sequence from the indexes, so that it can also work as an encryption system,
+  I decided to separate the short sequence from the indexes and break them down into two different files, so that it can also work as an encryption system,
   since the short sequence is unreadable and meaningless without the indexes.
 
   @newpage\
@@ -69,6 +73,7 @@
     01001000 01101001 00100000 01101000 01101111 01110111 00100000 01100001 01110010 01100101 00100000 01111001 01101111 01110101 00111111
   }
 
+  This sequence of bits is pretty much incompressible, so let's try to see it with other representation.
   Since an octal digit represents 3 bits, and 8 is not divisible by 3, we just join these bits and partition it in pieces of 3 bits:
 
   @center {
@@ -88,7 +93,7 @@
   }
 
   You can clearly see more repeating characters in the last two sequences, this means we can shorten this sequence.\\
-  After writing the algorithm, I actually realized that using hexadecimal, the output is shorter than using octal.
+  After writing the algorithm, I actually realized that using hexadecimal, the output is shorter than using octal, so I ended up using that.
 
   @section The indexes-passcode Creator\
   This part is for creating the file where all the indexes are stored.
@@ -140,7 +145,7 @@
     \begin{center}
     \begin{tabular}{||c|c||}
       \hline
-      Char & code (bits) \\
+      Char & Code (bits) \\
       \hline
       \hline
       'a' & 1 \\
@@ -207,5 +212,6 @@
   }
   \\ \\ \\
   I tested these two methods with the same text file, sized 11.76 KB. \\
-  I can clearly say that the huffman method is way more efficient than the shortcuts one.
+  I can clearly say that the huffman method is way more efficient than the shortcuts one.\\
+  However, I found out that these two methods only work with text files, not binary ones like executables etc.
 }
